@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:padding="19dp"
+    tools:context=".HomepageActivity">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:scaleType="center"
+        android:src="@drawable/usiu_logo" />
+
+    <TextView
+        android:id="@+id/text_view_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="75dp"
+        android:text="@string/heading"
+        android:textColor="@color/bold_color"
+        android:textSize="35sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/text_view_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_view_heading"
+        android:layout_marginTop="45dp"
+        android:background="#f2f2f2"
+        android:hint="Enter Student ID"
+        android:inputType="number"
+        android:padding="19dp"
+        android:textColorHint="@android:color/black"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/text_view_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_view_id"
+        android:layout_marginTop="35dp"
+        android:background="#f2f2f2"
+        android:hint="Enter Student Name"
+        android:padding="19dp"
+        android:textColorHint="@android:color/black"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/button_ok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_view_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp"
+        android:background="@color/colorAccent"
+        android:text="OK"
+        android:textStyle="bold" />
+
+</RelativeLayout>
