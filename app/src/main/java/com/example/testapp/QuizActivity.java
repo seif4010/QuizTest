@@ -132,25 +132,6 @@ public class QuizActivity extends AppCompatActivity {
         intent.putExtra("failed", failed);
         intent.putExtra("attempt", attempted);
 
-
-        sendTextMessage();
         startActivity(intent);
     }
-    private void sendTextMessage(){
-        try{
-            SmsManager txtmsg = SmsManager.getDefault();
-            String txt = "Student Name is " +name
-                    +"\nRegistration number " +Id +"\nTotal Questions Attempted: " +attempted + " / 5"
-                    + "\nStudent score: " +score +" / 5"
-                    +"\n Questions Failed " +failed + " / 5"
-                    +"\nQuestions not Attempted:" +skipped + " / 5";
-            txtmsg.sendTextMessage("+254701699145", null, txt, null, null);
-            Toast.makeText(getApplicationContext(), "SMS sent.",
-                    Toast.LENGTH_LONG).show();
-        }catch(Exception e){
-            Toast.makeText(getApplicationContext(), "SMS failed, please try again.", Toast.LENGTH_LONG).show();
-            e.printStackTrace();
-        }
-    }
-
 }
